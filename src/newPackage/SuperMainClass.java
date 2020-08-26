@@ -53,18 +53,36 @@ public class SuperMainClass {
         //arr4[0] = new int[4];
 
         for (int i = 0; i < arr4.length; i++) {
-            for ( int z = 0; z < arr4.length ; z++){
+            for (int z = 0; z < arr4.length; z++) {
 
-            if (i==z || z+i == arr4.length-1) {
-                arr4[i][z] = 1;
+                if (i == z || z + i == arr4.length - 1) {
+                    arr4[i][z] = 1;
 
-            }System.out.printf("%6s",arr4[i][z]);
+                }
+                System.out.printf("%6s", arr4[i][z]);
             }
             System.out.println();
         }
 
+        //5. ** Задать одномерный массив и найти в нем минимальный и максимальный элементы (без помощи интернета);
 
+        int[] arr5 = {1, 5, 3, 2, 11, 4, 5, 2, 4, -55, 9, 1};
+        int max = arr5[0];
+        int min = arr5[arr5.length-1];
+
+        for (int i = 0, q = arr5.length-1; i < arr5.length; i++, q--) {
+
+            if (arr5[i] >= max) {
+                max = arr5[i];
+            }
+            if (arr5[q] < min) {
+                min = arr5[i];
+            }
+        }
+        System.out.println("Максимальное число массива: " + max);
+        System.out.println("Минимальное число массива: " + min);
 
 
     }
+
 }
