@@ -68,9 +68,9 @@ public class SuperMainClass {
 
         int[] arr5 = {1, 5, 3, 2, 11, 4, 5, 2, 4, -55, 9, 1};
         int max = arr5[0];
-        int min = arr5[arr5.length-1];
+        int min = arr5[arr5.length - 1];
 
-        for (int i = 0, q = arr5.length-1; i < arr5.length; i++, q--) {
+        for (int i = 0, q = arr5.length - 1; i < arr5.length; i++, q--) {
 
             if (arr5[i] >= max) {
                 max = arr5[i];
@@ -81,6 +81,31 @@ public class SuperMainClass {
         }
         System.out.println("Максимальное число массива: " + max);
         System.out.println("Минимальное число массива: " + min);
+
+        //6. ** Написать метод, в который передается не пустой одномерный целочисленный массив, метод должен вернуть true, если в массиве есть место, в котором сумма левой и правой части массива равны. Примеры: checkBalance([2, 2, 2, 1, 2, 2, || 10, 1]) → true, checkBalance([1, 1, 1, || 2, 1]) → true, граница показана символами ||, эти символы в массив не входят.
+
+        int[] arr6 = {1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1};
+        int sum1 = 0;
+        int sum2 = 0;
+        int score = 0;
+
+
+        for (int i = 0; i < arr5.length; i++) {
+            sum1 += arr6[i];
+            score++;
+            for (int g = arr5.length - 1; g>i; g--){
+                sum2 += arr6[g];
+
+                if (sum1 == sum2){
+                    System.out.println("Суммы сошлись c " + score +" раза!");}
+
+
+
+            }
+
+        }
+        System.out.println("Сума чисел массива: " + sum1 +" и " + sum2);
+        System.out.println(Arrays.toString(arr6));
 
 
     }
