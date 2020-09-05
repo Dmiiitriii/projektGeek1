@@ -6,12 +6,12 @@ public class Staff {
     private String lastName;
     private String middleName;
     private String position;
-    private String salary;
+    private int salary;
     private String email;
     private String telephoneNumber;
     private int age;
 
-    public Staff(String name, String lastName, String middleName, String position, String salary, String email, String telephoneNumber, int age){
+    public Staff(String lastName, String name, String middleName, String position, int salary, String email, String telephoneNumber, int age){
         this.name = name;
         this.lastName = lastName;
         this.middleName = middleName;
@@ -23,11 +23,29 @@ public class Staff {
 
     }
 
-    public void info (){
-        System.out.printf("Stuff %s %s %s %s %s %s %s %s %d \n", name, lastName, middleName, position, salary, email, telephoneNumber, age);
-
-
+    @Override
+    public String toString() {
+        return "Staff{" +
+                "name='" + name + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", middleName='" + middleName + '\'' +
+                ", position='" + position + '\'' +
+                ", salary=" + salary +
+                ", email='" + email + '\'' +
+                ", telephoneNumber='" + telephoneNumber + '\'' +
+                ", age=" + age +
+                '}';
     }
+
+    public void info () {
+        System.out.printf("Сотрудник: %s %s %s, должность: %s, зарплата: %s рублей, 'e-mail: %s, телефон: %s, возраст: %d \n", lastName, name, middleName, position, salary, email, telephoneNumber, age);
+    }
+    /*public void staffUpTo40 (){
+        for (int i=0;i<employee.length; i++ ){
+            if (employee[i][7]<40){}
+
+        }
+    }*/
 
 
 
