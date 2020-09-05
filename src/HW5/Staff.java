@@ -34,7 +34,7 @@ public class Staff {
                 ", email='" + email + '\'' +
                 ", telephoneNumber='" + telephoneNumber + '\'' +
                 ", age=" + age +
-                '}';
+                '}'+ System.lineSeparator();
     }
 
     public void info () {
