@@ -23,6 +23,7 @@ public class Staff {
 
     }
 
+
     @Override
     public String toString() {
         return "Staff{" +
@@ -40,14 +41,9 @@ public class Staff {
     public void info () {
         System.out.printf("Сотрудник: %s %s %s, должность: %s, зарплата: %s рублей, 'e-mail: %s, телефон: %s, возраст: %d \n", lastName, name, middleName, position, salary, email, telephoneNumber, age);
     }
-    /*public void staffUpTo40 (){
-        for (int i=0;i<employee.length; i++ ){
-            if (employee[i][7]<40){}
-
-        }
-    }*/
 
 
-
-
+    public int getAge() {
+        return age;
+    }
 }

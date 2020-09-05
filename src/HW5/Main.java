@@ -6,29 +6,30 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Staff employee1 = new Staff("Иван", "Иванов", "Иванович", "engineer", 25000, "ivanov@mail.mail", "123456", 42);
-        Staff employee2 = new Staff("Дмитрий", "Кривошея", "Игоревич", "engineer", 25000, "ivanov@mail.mail", "123456", 34);
-        Staff employee3 = new Staff("Сергей", "Корж", "Алексеевич", "engineer", 25000, "ivanov@mail.mail", "123456", 51);
-        Staff employee4 = new Staff("Пётр", "Краснов", "Иванович", "engineer", 25000, "ivanov@mail.mail", "123456", 28);
-        Staff employee5 = new Staff("Евгений", "Куликов", "Иванович", "engineer", 25000, "ivanov@mail.mail", "123456", 92);
+        Staff employee1 = new Staff("Иванов", "Иван", "Иванович", "engineer", 25000, "ivanov@mail.mail", "123456", 42);
+        Staff employee2 = new Staff("Кривошея", "Дмитрий", "Игоревич", "engineer", 25000, "ivanov@mail.mail", "123456", 34);
+        Staff employee3 = new Staff("Корж", "Сергей", "Алексеевич", "engineer", 25000, "ivanov@mail.mail", "123456", 51);
+        Staff employee4 = new Staff("Краснов", "Пётр", "Иванович", "engineer", 25000, "ivanov@mail.mail", "123456", 28);
+        Staff employee5 = new Staff("Куликов", "Евгений", "Иванович", "engineer", 25000, "ivanov@mail.mail", "123456", 92);
 
         Staff[] employee = new Staff[5];
-        employee[0] = new Staff("Иван", "Иванов", "Иванович", "engineer", 60000, "ivanov@mail.mail", "123456", 42);
-        employee[1] = new Staff("Дмитрий", "Кривошея", "Игоревич", "engineer", 50000, "ivanov@mail.mail", "123456", 34);
-        employee[2] = new Staff("Сергей", "Корж", "Алексеевич", "engineer", 45000, "ivanov@mail.mail", "123456", 51);
-        employee[3] = new Staff("Пётр", "Краснов", "Иванович", "engineer", 25000, "ivanov@mail.mail", "123456", 28);
-        employee[4] = new Staff("Евгений", "Куликов", "Иванович", "engineer", 32000, "ivanov@mail.mail", "123456", 92);
+        employee[0] = new Staff("Иванов", "Иван", "Иванович", "engineer", 25000, "ivanov@mail.mail", "123456", 42);
+        employee[1] = new Staff("Кривошея", "Дмитрий", "Игоревич", "engineer", 25000, "ivanov@mail.mail", "123456", 34);
+        employee[2] = new Staff("Корж", "Сергей", "Алексеевич", "engineer", 25000, "ivanov@mail.mail", "123456", 51);
+        employee[3] = new Staff("Краснов", "Пётр", "Иванович", "engineer", 25000, "ivanov@mail.mail", "123456", 28);
+        employee[4] = new Staff("Куликов", "Евгений", "Иванович", "engineer", 25000, "ivanov@mail.mail", "123456", 92);
 
-        System.out.println(Arrays.toString(employee));
+        /*System.out.println(Arrays.toString(employee));
         employee1.info();
+        employee2.info();
+        employee3.info();
+        employee4.info();
+        employee5.info();*/
 
-
-        /*for (int i = 0; i < 5; i++) {
-            if (employee[i][employee.length-1] < 40) {
-                System.out.println(Arrays.toString(employee));
-            }
-
-        }*/
+        for (Staff staff: employee){
+            if (staff.getAge()>40)
+             staff.info();
+        }
 
 
     }
