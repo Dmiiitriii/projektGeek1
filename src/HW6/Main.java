@@ -11,11 +11,10 @@ public class Main {
         cat.info();
         dog.info();
 
-
         dog.run(550);
         dog.swim(11);
 
-        cat.run(201);
+        cat.run(20);
         cat.swim(1);
 
 

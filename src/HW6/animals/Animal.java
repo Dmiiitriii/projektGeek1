@@ -7,7 +7,6 @@ public class Animal {
     int maxSwim;
     int maxRun;
 
-
     public void swim(int distance) {
         if (distance <= maxSwim && distance>0 ) {
             System.out.printf("%s проплыл %d метров!\n", name, distance);
@@ -18,7 +17,6 @@ public class Animal {
         if (maxSwim == 0) {
             System.out.printf("%s не умеет плавать\n", name);
         }
-
     }
 
     public void run(int distance) {
