@@ -1,7 +1,6 @@
 package HW88;
 
 
-
 import javax.swing.*;
 import java.awt.*;
 
@@ -10,6 +9,7 @@ public class GameWindow extends JFrame {
     static final int WINDOW_Y = 500;
     static final int WINDOW_WIDTH = 505;
     static final int WINDOW_HEIGHT = 555;
+
 
     private BattleField battleField;
     private SettingWindows settingWindow;

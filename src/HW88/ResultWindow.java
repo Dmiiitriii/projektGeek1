@@ -1,7 +1,10 @@
 package HW88;
 
+
 import javax.swing.*;
 import java.awt.*;
+
+
 
 
     public class ResultWindow extends JFrame {

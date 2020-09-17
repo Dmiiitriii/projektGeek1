@@ -35,6 +35,7 @@ public class Logic {
             System.out.println("Компьютер победил.");
 
             return;
+
         }
         if (isFull()) {
             System.out.println("Ничья");
