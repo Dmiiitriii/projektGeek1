@@ -30,8 +30,10 @@ public class Main {
             if (staff.getAge()>40)
              staff.info();
         }
-
-
+        for (int i = 0; i<employee.length; i++) {
+            if (employee[i].getAge() > 40)
+                employee[i].info();
+        }
     }
 
 }

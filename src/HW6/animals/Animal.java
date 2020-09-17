@@ -7,6 +7,13 @@ public class Animal {
     int maxSwim;
     int maxRun;
 
+    private static int animalCount;
+    static {animalCount = 0;}
+
+    public static int getAnimalCount(){
+        return animalCount;
+    }
+
     public void swim(int distance) {
         if (distance <= maxSwim && distance>0 ) {
             System.out.printf("%s проплыл %d метров!\n", name, distance);
@@ -41,5 +48,6 @@ public class Animal {
         this.age = age;
         this.maxRun = maxRun;
         this.maxSwim = maxSwim;
+        animalCount++;
     }
 }

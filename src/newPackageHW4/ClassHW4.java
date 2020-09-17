@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class ClassHW4 {
 
-    public static int SIZE = 5;
+    public static int SIZE = 3;
     public static int DOTS_TO_WIN = 3;
     public static final char DOT_EMPTY = '•';
     public static final char DOT_X = 'X';
@@ -59,6 +59,7 @@ public class ClassHW4 {
         for (int i = SIZE - 1; i >= 0; i--) {
             for (int j = SIZE - DOTS_TO_WIN; j >= 0; j--) {
                 int count3 = 0;
+
                 for (int a = i, b = j; a>=0; a--, b++) {
                     if (map[a][b] == symb)
                         count3++;
@@ -67,7 +68,21 @@ public class ClassHW4 {
                             return true;
                 }
             }
-        }*/
+        }
+        for (int i = SIZE - 1; i >= 0; i--) {
+            for (int j = SIZE - DOTS_TO_WIN; j >= 0; j--) {
+                int count3 = 0;
+                   while (i>=0 && j<SIZE) {
+                    if (map[i][j] == symb)
+                        count3++;
+                        i--;
+                        j++;
+                        if (count3 == DOTS_TO_WIN)
+                            return true;
+                }
+            }
+        }
+
         int a = SIZE-1;
         int b = SIZE - DOTS_TO_WIN;
         int count3 = 0;
@@ -79,7 +94,8 @@ public class ClassHW4 {
             b++;
             if (count3 == DOTS_TO_WIN)
                 return true;
-        }
+            else {b--;}
+        }*/
 
 
 
@@ -114,11 +130,18 @@ public class ClassHW4 {
                 if (count == DOTS_TO_WIN)
                     return true;
             }
+        }
+        //проверка второй диагонали
+        int count2 = 0;
+        for (int i = 0, j = SIZE-1; i<SIZE; i++, j--) {
 
-
+            if (map[i][j] == symb) {
+                count2++;
+                if (count2 == DOTS_TO_WIN)
+                    return true;
+            }
         }
         return false;
-
     }
 
     public static boolean isMapFull() {
